@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "profile": {
+    "name": "Caleb Gilbert",
+    "role": "Cinematography",
+    "location": "Ōtautahi/Christchurch, NZ",
+    "availability": "Cinematography",
+    "intro": "A collection of short stories",
+    "biography": "An independent filmmaker based in Ōtautahi, NZ. I specialise in narrative, short story films with a dramatic focus.",
+    "email": "caleblukeg@gmail.com",
+    "instagram": "",
+    "vimeo": ""
+  },
+  "hero": {
+    "eyebrow": "Independent cinematography",
+    "title": "A narrative focus",
+    "image": "",
+    "imageAlt": "",
+    "projectId": ""
+  },
+  "projects": [
+    {
+      "id": "film-6ffd86b4",
+      "title": "Broken Vessel",
+      "category": "Narrative",
+      "year": "2026",
+      "duration": "11:39",
+      "director": "Alyssa Murphy",
+      "description": "Feisty teenage girl, Brooklyn emotionally struggles with constant bad decisions, impulsive escapism, and drug use; she makes the decision to change when she realises she is losing the people that really matter. \n",
+      "image": "assets/images/BV1.png",
+      "imageAlt": "Brooklyn paints at her desk",
+      "videoUrl": "https://www.youtube.com/watch?v=xLkhIDfzLAQ"
+    },
+    {
+      "id": "film-f1cd32b7",
+      "title": "Dill Pickle",
+      "category": "Narrative",
+      "year": "2026",
+      "duration": "11:20",
+      "director": "Ayesha Downes",
+      "description": "A 12 year old aspiring rapper accidentally changes a teenage girl’s life forever",
+      "image": "assets/images/DP1.jpg",
+      "imageAlt": "Big D and Stacy talk at the bridge",
+      "videoUrl": "https://www.youtube.com/watch?v=3T4sPjpNups"
+    }
+  ]
+}
