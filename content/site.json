@@ -20,42 +20,133 @@
   },
   "projects": [
     {
-      "id": "film-6ffd86b4",
       "title": "Broken Vessel",
+      "slug": "broken-vessel",
+      "featured": true,
       "category": "Narrative",
       "year": "2026",
       "duration": "11:39",
       "director": "Alyssa Murphy",
+      "id": "film-6ffd86b4",
       "description": "Feisty teenage girl, Brooklyn emotionally struggles with constant bad decisions, impulsive escapism, and drug use; she makes the decision to change when she realises she is losing the people that really matter. \n",
       "image": "assets/images/BV1.png",
       "imageAlt": "Brooklyn paints at her desk",
       "videoUrl": "https://www.youtube.com/watch?v=xLkhIDfzLAQ",
-      "slug": "broken-vessel",
-      "featured": true,
       "previewVideoUrl": "",
-      "stills": [],
-      "credits": [],
-      "equipment": [],
-      "pressKitUrl": ""
+      "pressKitUrl": "",
+      "stills": [
+        {
+          "image": "assets/images/BV2.png",
+          "alt": "Brooklyn in her room",
+          "caption": ""
+        },
+        {
+          "image": "assets/images/BV3.png",
+          "alt": "Brooklyn and Ren talk outside his house",
+          "caption": ""
+        },
+        {
+          "image": "assets/images/BV4.png",
+          "alt": "Wide shot of Brooklyn and Ren on the deck",
+          "caption": ""
+        },
+        {
+          "image": "assets/images/BV5.png",
+          "alt": "Brooklyn's mum shouts from the couch",
+          "caption": ""
+        },
+        {
+          "image": "assets/images/BV7.png",
+          "alt": "Brooklyn looks at herself in the mirror",
+          "caption": ""
+        },
+        {
+          "image": "assets/images/BV8.png",
+          "alt": "Brooklyn's eye",
+          "caption": ""
+        }
+      ],
+      "credits": [
+        {
+          "role": "Writer",
+          "name": "Alyssa Murphy"
+        },
+        {
+          "role": "Producer",
+          "name": "Joshua Kent"
+        },
+        {
+          "role": "Producer",
+          "name": "Junxi Cao"
+        }
+      ],
+      "equipment": [
+        {
+          "label": "Camera",
+          "value": "Sony FX6"
+        },
+        {
+          "label": "Lenses",
+          "value": "NiSi Athena FF"
+        }
+      ]
     },
     {
-      "id": "film-f1cd32b7",
       "title": "Dill Pickle",
+      "slug": "dill-pickle",
+      "featured": true,
       "category": "Narrative",
       "year": "2026",
       "duration": "11:20",
       "director": "Ayesha Downes",
+      "id": "film-f1cd32b7",
       "description": "A 12 year old aspiring rapper accidentally changes a teenage girl’s life forever",
       "image": "assets/images/DP1.jpg",
       "imageAlt": "Big D and Stacy talk at the bridge",
       "videoUrl": "https://www.youtube.com/watch?v=3T4sPjpNups",
-      "slug": "dill-pickle",
-      "featured": true,
       "previewVideoUrl": "",
-      "stills": [],
-      "credits": [],
-      "equipment": [],
-      "pressKitUrl": ""
+      "pressKitUrl": "",
+      "stills": [
+        {
+          "image": "assets/images/DP2.jpg",
+          "alt": "Big D sits at the bench",
+          "caption": ""
+        },
+        {
+          "image": "assets/images/DP3.jpg",
+          "alt": "Big D looks loads a cassette into a recorder",
+          "caption": ""
+        },
+        {
+          "image": "assets/images/DP4.jpg",
+          "alt": "BTS of Big D at hall location",
+          "caption": ""
+        }
+      ],
+      "credits": [
+        {
+          "role": "Writer",
+          "name": "Ayesha Downes"
+        },
+        {
+          "role": "Producer",
+          "name": "Jacob Webb"
+        },
+        {
+          "role": "Producer",
+          "name": "Diana Smedley"
+        }
+      ],
+      "equipment": [
+        {
+          "label": "Camera",
+          "value": "Sony FX6"
+        },
+        {
+          "label": "Lenses",
+          "value": "NiSi Athena FF"
+        }
+      ]
     }
   ]
 }
