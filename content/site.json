@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "profile": {
+    "name": "Portfolio",
+    "role": "Cinematography",
+    "location": "",
+    "availability": "Cinematography",
+    "intro": "A collection of stories told through light, movement and the moments in between.",
+    "biography": "Light, movement and the spaces in between.",
+    "email": "",
+    "instagram": "",
+    "vimeo": ""
+  },
+  "hero": {
+    "eyebrow": "Independent cinematography",
+    "title": "In a different light.",
+    "image": "assets/images/coast.jpg",
+    "imageAlt": "A coastal landscape at dusk.",
+    "projectId": "the-quiet-between"
+  },
+  "projects": [
+    {
+      "id": "the-quiet-between",
+      "title": "The quiet between",
+      "category": "Narrative",
+      "year": "2026",
+      "duration": "Short film",
+      "director": "",
+      "description": "Sample project.",
+      "image": "assets/images/coast.jpg",
+      "imageAlt": "A lone figure near a rugged coastline at dusk.",
+      "videoUrl": ""
+    },
+    {
+      "id": "after-hours",
+      "title": "After hours",
+      "category": "Music video",
+      "year": "2026",
+      "duration": "Music video",
+      "director": "",
+      "description": "Sample project.",
+      "image": "assets/images/window.jpg",
+      "imageAlt": "A woman by a rain-streaked window at night.",
+      "videoUrl": ""
+    },
+    {
+      "id": "somewhere-slowly",
+      "title": "Somewhere, slowly",
+      "category": "Commercial",
+      "year": "2026",
+      "duration": "Brand film",
+      "director": "",
+      "description": "Sample project.",
+      "image": "assets/images/motel.jpg",
+      "imageAlt": "A vintage car outside a rural motel at blue hour.",
+      "videoUrl": ""
+    }
+  ]
+}

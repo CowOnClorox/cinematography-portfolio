@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101110">
+  <meta name="description" content="A cinematography portfolio. Selected films, stories and collaborations.">
+  <title>Portfolio — Cinematography</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="media.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#work">Skip to selected work</a>
+  <header class="site-header wrap">
+    <a class="identity" href="#top" aria-label="Home"><span data-profile="name">Portfolio</span><span class="identity-role" data-profile="role">Cinematography</span></a>
+    <nav aria-label="Main navigation"><a class="nav-active" href="#work">Work <span>↘</span></a><a href="#information">Information</a><a href="#contact">Contact</a></nav>
+  </header>
+  <main>
+    <section class="introduction wrap" aria-labelledby="intro-title">
+      <div><p class="eyebrow" id="hero-eyebrow">Independent cinematography</p><h1 id="intro-title">In a different<br>light.</h1></div>
+      <div class="intro-aside"><p data-profile="intro">A collection of stories told through light, movement and the moments in between.</p><a class="text-link" href="#work">Explore selected work <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section id="work" class="work-section wrap" aria-labelledby="work-title">
+      <div class="section-bar"><h2 id="work-title">Selected work <span id="work-count">03</span></h2><div id="filters" class="filters" role="group" aria-label="Filter films"></div></div>
+      <div id="projects" class="project-grid" aria-live="polite" aria-busy="true"></div>
+      <p id="load-error" class="load-error" hidden>The collection is currently unavailable. Please try again later.</p>
+      <noscript><p>Enable JavaScript to view the films and portfolio content.</p></noscript>
+      <div class="gallery-note"><span>A selection of frames & stories</span><span>Light / Motion / Story</span></div>
+    </section>
+    <section id="information" class="information wrap" aria-labelledby="information-title">
+      <div class="section-label"><span class="tiny-cross" aria-hidden="true">+</span><h2 id="information-title">Behind the camera</h2></div>
+      <div class="information-copy"><p class="large-copy" data-profile="biography">Light, movement and the spaces in between.</p><div class="information-details"><p><span class="muted">Cinematography</span><span data-profile="location"></span></p><p><span class="muted">Working across</span><span id="categories">Narrative / Commercial / Music video</span></p></div></div>
+    </section>
+    <section id="contact" class="contact wrap" aria-labelledby="contact-title">
+      <p class="eyebrow"><span class="availability-dot" aria-hidden="true"></span><span data-profile="availability">Cinematography</span></p>
+      <div class="contact-line"><h2 id="contact-title">Let's make<br><em>something move.</em></h2><a id="contact-button" class="contact-circle" href="#contact" aria-label="Contact details"><span aria-hidden="true">↗</span></a></div>
+      <div class="contact-bottom"><p id="contact-email">Contact details coming soon.</p><div id="social-links" class="social-links"></div></div>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><span>© <span id="copyright-year"></span> <span data-profile="name">Portfolio</span></span><span>Light. Motion. Story.</span><a href="#top">Back to top ↑</a></footer>
+  <dialog id="film-dialog" aria-labelledby="film-title" class="film-dialog">
+    <div class="dialog-head"><p class="eyebrow">Selected work / <span id="film-number"></span></p><button id="close-film" class="close-button" type="button" aria-label="Close film">Close <span aria-hidden="true">×</span></button></div>
+    <div id="film-player" class="film-player"></div>
+    <div class="film-details"><div><p id="film-category" class="eyebrow"></p><h2 id="film-title"></h2><p id="film-description"></p></div><dl id="film-credits"></dl></div>
+  </dialog>
+</body>
+</html>
