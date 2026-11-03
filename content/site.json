@@ -149,18 +149,18 @@
       ]
     },
     {
-      "id": "film-6f8a8b68",
       "title": "Soup Sundays",
+      "slug": "soup-sundays",
+      "featured": true,
       "category": "Narrative",
       "year": "2025",
       "duration": "10:28",
       "director": "Ayesha Downes",
+      "id": "film-6f8a8b68",
       "description": "A neurodivergent boy goes on a heartbreaking journey after losing his only support person.",
       "image": "assets/images/SS1.png",
       "imageAlt": "Harold is comforted by Miss Jingle",
       "videoUrl": "https://www.youtube.com/watch?app=desktop&v=EHRnoslwJAs",
-      "slug": "soup-sundays",
-      "featured": true,
       "previewVideoUrl": "",
       "pressKitUrl": "",
       "stills": [
@@ -210,6 +210,50 @@
           "value": "NiSi Athena FF"
         }
       ]
+    },
+    {
+      "id": "film-5aee5ba4",
+      "title": "KARMA",
+      "category": "Documentary",
+      "year": "2025",
+      "duration": "04:54",
+      "director": "Holly Taylor",
+      "description": "A night spent at a local kebab shop",
+      "image": "assets/images/K1.png",
+      "imageAlt": "",
+      "videoUrl": "https://www.youtube.com/watch?v=ere97_SiRt0",
+      "slug": "karma",
+      "featured": false,
+      "previewVideoUrl": "",
+      "pressKitUrl": "",
+      "stills": [
+        {
+          "image": "assets/images/K2.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "image": "assets/images/K3.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "image": "assets/images/K4.png",
+          "alt": "",
+          "caption": ""
+        }
+      ],
+      "credits": [
+        {
+          "role": "Camera Operator 1",
+          "name": "Alyssa Murphy"
+        },
+        {
+          "role": "Camera Operator 2",
+          "name": "Caleb Gilbert"
+        }
+      ],
+      "equipment": []
     }
   ]
 }
