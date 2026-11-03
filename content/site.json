@@ -29,7 +29,14 @@
       "description": "Feisty teenage girl, Brooklyn emotionally struggles with constant bad decisions, impulsive escapism, and drug use; she makes the decision to change when she realises she is losing the people that really matter. \n",
       "image": "assets/images/BV1.png",
       "imageAlt": "Brooklyn paints at her desk",
-      "videoUrl": "https://www.youtube.com/watch?v=xLkhIDfzLAQ"
+      "videoUrl": "https://www.youtube.com/watch?v=xLkhIDfzLAQ",
+      "slug": "broken-vessel",
+      "featured": true,
+      "previewVideoUrl": "",
+      "stills": [],
+      "credits": [],
+      "equipment": [],
+      "pressKitUrl": ""
     },
     {
       "id": "film-f1cd32b7",
@@ -41,7 +48,14 @@
       "description": "A 12 year old aspiring rapper accidentally changes a teenage girl’s life forever",
       "image": "assets/images/DP1.jpg",
       "imageAlt": "Big D and Stacy talk at the bridge",
-      "videoUrl": "https://www.youtube.com/watch?v=3T4sPjpNups"
+      "videoUrl": "https://www.youtube.com/watch?v=3T4sPjpNups",
+      "slug": "dill-pickle",
+      "featured": true,
+      "previewVideoUrl": "",
+      "stills": [],
+      "credits": [],
+      "equipment": [],
+      "pressKitUrl": ""
     }
   ]
 }

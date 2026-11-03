@@ -9,13 +9,14 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script src="media.js" defer></script>
+  <script src="site.js" defer></script>
   <script src="app.js" defer></script>
 </head>
-<body id="top">
+<body id="top" data-root="./" data-page="home">
   <a class="skip-link" href="#work">Skip to selected work</a>
   <header class="site-header wrap">
-    <a class="identity" href="#top" aria-label="Home"><span data-profile="name">Portfolio</span><span class="identity-role" data-profile="role">Cinematography</span></a>
-    <nav aria-label="Main navigation"><a class="nav-active" href="#work">Work <span>↘</span></a><a href="#information">Information</a><a href="#contact">Contact</a></nav>
+    <a class="identity" data-link="home" href="./" aria-label="Home"><span data-profile="name">Portfolio</span><span class="identity-role" data-profile="role">Cinematography</span></a>
+    <nav aria-label="Main navigation"><a data-link="work" href="work/">Work <span>↗</span></a><a data-link="information" href="#information">Information</a><a data-link="contact" href="#contact">Contact</a></nav>
   </header>
   <main>
     <section class="introduction wrap" aria-labelledby="intro-title">
@@ -25,9 +26,10 @@
     <section id="work" class="work-section wrap" aria-labelledby="work-title">
       <div class="section-bar"><h2 id="work-title">Selected work <span id="work-count">03</span></h2><div id="filters" class="filters" role="group" aria-label="Filter films"></div></div>
       <div id="projects" class="project-grid" aria-live="polite" aria-busy="true"></div>
+      <p id="featured-empty" hidden><a data-link="work" href="work/">Explore the full filmography ↗</a></p>
       <p id="load-error" class="load-error" hidden>The collection is currently unavailable. Please try again later.</p>
       <noscript><p>Enable JavaScript to view the films and portfolio content.</p></noscript>
-      <div class="gallery-note"><span>A selection of frames & stories</span><span>Light / Motion / Story</span></div>
+      <div class="gallery-note"><span>A selection of frames & stories</span><a class="all-work-link" data-link="work" href="work/">View all work ↗</a></div>
     </section>
     <section id="information" class="information wrap" aria-labelledby="information-title">
       <div class="section-label"><span class="tiny-cross" aria-hidden="true">+</span><h2 id="information-title">Behind the camera</h2></div>
@@ -40,10 +42,5 @@
     </section>
   </main>
   <footer class="site-footer wrap"><span>© <span id="copyright-year"></span> <span data-profile="name">Portfolio</span></span><span>Light. Motion. Story.</span><a href="#top">Back to top ↑</a></footer>
-  <dialog id="film-dialog" aria-labelledby="film-title" class="film-dialog">
-    <div class="dialog-head"><p class="eyebrow">Selected work / <span id="film-number"></span></p><button id="close-film" class="close-button" type="button" aria-label="Close film">Close <span aria-hidden="true">×</span></button></div>
-    <div id="film-player" class="film-player"></div>
-    <div class="film-details"><div><p id="film-category" class="eyebrow"></p><h2 id="film-title"></h2><p id="film-description"></p></div><dl id="film-credits"></dl></div>
-  </dialog>
 </body>
 </html>

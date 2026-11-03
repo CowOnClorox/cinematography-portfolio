@@ -4,10 +4,10 @@
     try{const url=new URL(String(value));return /^https?:$/.test(url.protocol)?url.href:null;}catch{return null;}
   }
   function imageUrl(value){
-    if(typeof value!=='string'||!value.trim()) return 'assets/images/coast.jpg';
+    if(typeof value!=='string'||!value.trim()) return '';
     const clean=value.trim();
     if(webUrl(clean)) return clean;
-    if(/^[a-zA-Z][a-zA-Z\d+.-]*:/.test(clean)||clean.startsWith('//')||clean.startsWith('/')||clean.includes('\\')||clean.split('/').includes('..')) return 'assets/images/coast.jpg';
+    if(/^[a-zA-Z][a-zA-Z\d+.-]*:/.test(clean)||clean.startsWith('//')||clean.startsWith('/')||clean.includes('\\')||clean.split('/').includes('..')) return '';
     return clean;
   }
   function videoSource(value){

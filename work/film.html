@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101110">
+  <meta name="description" content="__PROJECT_DESCRIPTION__">
+  <meta property="og:title" content="__PROJECT_TITLE__">
+  <meta property="og:description" content="__PROJECT_DESCRIPTION__">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="__PROJECT_CANONICAL__">
+  <meta property="og:image" content="__PROJECT_IMAGE__">
+  <link rel="canonical" href="__PROJECT_CANONICAL__">
+  <title>__PROJECT_TITLE__ — __PROFILE_NAME__</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../project.css">
+  <script src="../../media.js" defer></script>
+  <script src="../../site.js" defer></script>
+  <script src="../../project.js" defer></script>
+</head>
+<body id="top" data-root="../../" data-page="film" data-project="__PROJECT_ID__">
+  <a class="skip-link" href="#film-content">Skip to film</a>
+  <header class="site-header wrap">
+    <a class="identity" href="../../" data-link="home" aria-label="Home"><span data-profile="name">Portfolio</span><span class="identity-role" data-profile="role">Cinematography</span></a>
+    <nav aria-label="Main navigation"><a class="nav-active" data-link="work" href="../../work/">Work <span aria-hidden="true">↘</span></a><a data-link="information" href="../../#information">Information</a><a data-link="contact" href="../../#contact">Contact</a></nav>
+  </header>
+  <main id="film-content" class="project-page" aria-busy="true">
+    <div class="project-breadcrumb wrap"><a data-link="work" href="../../work/"><span aria-hidden="true">↖</span> Back to all work</a><span id="project-position"></span></div>
+    <article id="project-content" hidden>
+      <header class="project-heading wrap">
+        <p id="project-meta" class="eyebrow"></p>
+        <h1 id="project-title" class="project-title">__PROJECT_TITLE__</h1>
+      </header>
+      <section id="project-stage" class="project-stage" aria-label="Film player">
+        <div id="project-poster" class="project-poster">
+          <div id="project-cover" class="project-cover"><span class="project-cover-fallback" hidden>Film still</span></div>
+          <div class="project-stage-shade" aria-hidden="true"></div>
+          <button id="project-play" class="project-play" type="button" hidden><span class="project-play-circle" aria-hidden="true">▶</span><span>Play film</span></button>
+          <p id="project-stage-caption" class="project-stage-caption" aria-hidden="true"></p>
+        </div>
+        <div id="project-player" class="project-player" hidden></div>
+      </section>
+      <div class="project-player-bar wrap"><p id="project-player-status" role="status" aria-live="polite"></p><button id="project-stop" type="button" hidden>Stop film <span aria-hidden="true">×</span></button></div>
+      <section id="project-information" class="project-information wrap project-reveal" aria-label="Film information">
+        <div id="project-synopsis" class="project-synopsis"><h2 class="project-section-title">About the film</h2><p id="project-description"></p></div>
+        <aside class="project-facts"><section id="project-credits-section" hidden><h2 class="project-section-title">Credits</h2><dl id="project-credits" class="project-fact-list"></dl></section><section id="project-equipment-section" hidden><h2 class="project-section-title">Equipment</h2><dl id="project-equipment" class="project-fact-list"></dl></section><a id="project-press-kit" class="project-resource" hidden target="_blank" rel="noopener noreferrer">Download press kit <span aria-hidden="true">↗</span></a></aside>
+      </section>
+      <section id="project-stills-section" class="project-stills-section wrap" aria-labelledby="project-stills-title" hidden>
+        <div class="project-section-bar"><h2 id="project-stills-title" class="project-section-title">Selected frames</h2><span id="project-stills-count"></span></div>
+        <div id="project-stills" class="project-stills"></div>
+      </section>
+      <nav id="project-pagination" class="project-pagination wrap project-reveal" aria-label="More films"></nav>
+      <div class="project-return wrap"><a data-link="work" href="../../work/">View all work <span aria-hidden="true">↗</span></a></div>
+    </article>
+    <div id="project-error" class="project-error wrap" role="status" hidden><p class="eyebrow">Film unavailable</p><h1>This frame is missing.</h1><p id="project-error-message">The film you’re looking for could not be found.</p><a data-link="work" href="../../work/">Explore all work <span aria-hidden="true">↗</span></a></div>
+    <noscript><p class="wrap">Enable JavaScript to view this film.</p></noscript>
+  </main>
+  <footer class="site-footer wrap"><span>© <span data-year></span> <span data-profile="name">Portfolio</span></span><span>Light. Motion. Story.</span><a href="#top">Back to top ↑</a></footer>
+  <dialog id="still-dialog" class="still-dialog" aria-labelledby="still-title"><div class="still-dialog-head"><h2 id="still-title">Selected frame</h2><p id="still-counter" aria-live="polite"></p><button id="still-close" type="button" aria-label="Close frame">Close <span aria-hidden="true">×</span></button></div><figure><div id="still-image" class="still-image"></div><figcaption id="still-caption"></figcaption></figure><div class="still-dialog-navigation"><button id="still-previous" type="button" aria-label="Previous frame"><span aria-hidden="true">←</span> Previous</button><button id="still-next" type="button" aria-label="Next frame">Next <span aria-hidden="true">→</span></button></div></dialog>
+</body>
+</html>
