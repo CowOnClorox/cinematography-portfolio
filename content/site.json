@@ -147,6 +147,69 @@
           "value": "NiSi Athena FF"
         }
       ]
+    },
+    {
+      "id": "film-6f8a8b68",
+      "title": "Soup Sundays",
+      "category": "Narrative",
+      "year": "2025",
+      "duration": "10:28",
+      "director": "Ayesha Downes",
+      "description": "A neurodivergent boy goes on a heartbreaking journey after losing his only support person.",
+      "image": "assets/images/SS1.png",
+      "imageAlt": "Harold is comforted by Miss Jingle",
+      "videoUrl": "https://www.youtube.com/watch?app=desktop&v=EHRnoslwJAs",
+      "slug": "soup-sundays",
+      "featured": true,
+      "previewVideoUrl": "",
+      "pressKitUrl": "",
+      "stills": [
+        {
+          "image": "assets/images/SS2.png",
+          "alt": "Harold and Miss Jingle paint",
+          "caption": ""
+        },
+        {
+          "image": "assets/images/SS3.png",
+          "alt": "Harold bows",
+          "caption": ""
+        },
+        {
+          "image": "assets/images/SS4.png",
+          "alt": "Young Harold watches TV",
+          "caption": ""
+        },
+        {
+          "image": "assets/images/SS5.png",
+          "alt": "Harold and Grammy watch TV",
+          "caption": ""
+        },
+        {
+          "image": "assets/images/SS6.png",
+          "alt": "Grammy close up",
+          "caption": ""
+        }
+      ],
+      "credits": [
+        {
+          "role": "Writer",
+          "name": "Ayesha Downes"
+        },
+        {
+          "role": "Producer",
+          "name": "Maria Bebb"
+        }
+      ],
+      "equipment": [
+        {
+          "label": "Camera`",
+          "value": "Sony FX6"
+        },
+        {
+          "label": "Lenses",
+          "value": "NiSi Athena FF"
+        }
+      ]
     }
   ]
 }
