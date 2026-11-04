@@ -50,14 +50,14 @@
     if(!candidates.length)return {ready:Promise.resolve(false),destroy(){}};
     const layer=P.node('div','hover-preview');layer.setAttribute('aria-hidden','true');frame.append(layer);
     let destroyed=false;let ticket=0;let index=0;let backend=null;let prepared=false;
-    let pointer=false;let focused=false;let active=false;let starting=false;let playingNow=false;let attempt=0;
-    let inView=true;let observer=null;let timer=0;let playTimer=0;
+    let pointer=false;let focused=false;let active=false;let starting=false;let playingNow=false;let bufferingNow=false;let attempt=0;
+    let inView=true;let observer=null;let timer=0;let playTimer=0;let revealTimer=0;
     let settle;const ready=new Promise(resolve=>{settle=resolve;});
     const enabled=()=>eligible()&&!document.hidden&&inView;
-    const hide=()=>frame.classList.remove('preview-playing');
+    const hide=()=>{clearTimeout(revealTimer);frame.classList.remove('preview-playing');};
     function finish(value){if(settle){settle(value);settle=null;}}
     function pause(){
-      active=false;starting=false;playingNow=false;++attempt;clearTimeout(playTimer);hide();
+      active=false;starting=false;playingNow=false;bufferingNow=false;++attempt;clearTimeout(playTimer);hide();
       try{backend?.pause();}catch{}
       if(activePreview===controller)activePreview=null;
     }
@@ -83,7 +83,7 @@
     function advance(){
       if(destroyed)return;
       const current=++ticket;
-      clearTimeout(timer);clearTimeout(playTimer);hide();prepared=false;starting=false;playingNow=false;
+      clearTimeout(timer);clearTimeout(playTimer);hide();prepared=false;starting=false;playingNow=false;bufferingNow=false;
       try{backend?.destroy();}catch{}
       backend=null;layer.replaceChildren();
       const source=candidates[index++];
@@ -96,8 +96,18 @@
       };
       const playing=()=>{
         if(!valid())return;
-        clearTimeout(playTimer);starting=false;playingNow=true;
-        if(active&&enabled())frame.classList.add('preview-playing');else pause();
+        clearTimeout(playTimer);clearTimeout(revealTimer);starting=false;playingNow=true;bufferingNow=false;
+        if(active&&enabled()){
+          revealTimer=setTimeout(()=>{
+            if(valid()&&active&&enabled()&&playingNow)frame.classList.add('preview-playing');
+          },160);
+        }else pause();
+      };
+      const buffering=()=>{
+        if(!valid()||!active)return;
+        starting=true;playingNow=false;bufferingNow=true;hide();
+        const run=attempt;clearTimeout(playTimer);
+        playTimer=setTimeout(()=>{if(valid()&&run===attempt&&active)advance();},12000);
       };
       timer=setTimeout(failed,20000);
       if(source.type==='video'){
@@ -108,6 +118,7 @@
         video.setAttribute('disablepictureinpicture','');
         video.addEventListener('loadeddata',loaded,{once:true});
         video.addEventListener('playing',playing);
+        video.addEventListener('waiting',buffering);
         video.addEventListener('error',failed,{once:true});
         backend={play:()=>video.play(),pause:()=>video.pause(),destroy(){video.pause();video.removeAttribute('src');video.load();video.remove();}};
         layer.append(video);video.src=P.url(source.url);video.load();return;
@@ -131,6 +142,7 @@
             onStateChange:event=>{
               if(!valid())return;
               if(event.data===1)playing();
+              if(event.data===3)buffering();
               if(event.data===0&&active){event.target.seekTo(0,true);event.target.playVideo();}
             },
             onError:failed,
@@ -146,6 +158,7 @@
           const player=new window.Vimeo.Player(iframe);
           backend={play:()=>player.play(),pause:()=>{player.pause().catch(()=>{});},destroy:()=>{player.destroy().catch(()=>{});}};
           player.on('playing',playing);player.on('error',failed);
+          player.on('bufferstart',buffering);player.on('bufferend',()=>{if(bufferingNow)playing();});
           player.ready().then(()=>player.setMuted(true)).then(loaded).catch(failed);
         }).catch(failed);
       }
