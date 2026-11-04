@@ -69,6 +69,14 @@
     clearTimeout(window.portfolioBoot);root.classList.remove('is-loading','is-revealing');loader?.remove();
   }
 
+  function restoreAnchor(){
+    const hash=window.location.hash;if(!hash)return;
+    let target;try{target=document.getElementById(decodeURIComponent(hash.slice(1)));}catch{return;}
+    if(!target)return;
+    const root=document.documentElement;const previous=root.style.scrollBehavior;
+    root.style.scrollBehavior='auto';target.scrollIntoView({block:'start'});root.style.scrollBehavior=previous;
+  }
+
   try{
     data=await P.load();P.chrome(data,'home');
     $('#hero-eyebrow').textContent=data.hero?.eyebrow||'Independent cinematography';
@@ -86,5 +94,5 @@
     if(typeof ResizeObserver==='function')new ResizeObserver(refit).observe($('#work'));
     else window.addEventListener('resize',refit);
   }catch(error){$('#load-error').hidden=false;$('#projects').setAttribute('aria-busy','false');}
-  finally{await reveal();}
+  finally{await reveal();restoreAnchor();}
 })();
